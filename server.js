@@ -9,9 +9,6 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-const PORT = process.env.PORT || 3001;
-app.listen(PORT);
-
 const mongoose = require('mongoose');
 
 mongoose.connect(
@@ -20,3 +17,6 @@ mongoose.connect(
     useMongoClient: true
   }
 );
+
+const PORT = process.env.PORT || 3001;
+app.listen(PORT);
